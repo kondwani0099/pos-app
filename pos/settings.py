@@ -27,6 +27,11 @@ DEBUG = True
 # Allowed Hosts Configuration
 ALLOWED_HOSTS = ['pos-app-rg8p.onrender.com', 'localhost', '127.0.0.1']
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    'https://pos-app-rg8p.onrender.com',
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -114,5 +119,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Login URLs
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login'
+
+# Additional Security Settings (Recommended for Production)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True  # Redirect all HTTP traffic to HTTPS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
