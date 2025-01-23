@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--w(dug*va_megpa25w$gmv8o6+f8!fg_*m1^u$)z25pab0hicm
 DEBUG = True
 
 # Add the domain of your deployed app and localhost for development
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'pos-app-rg8p.onrender.com,localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'pos-app-rg8p.onrender.com').split(',')
 
 # Application definition
 INSTALLED_APPS = [
